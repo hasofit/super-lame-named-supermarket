@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dommo7po12eyx" path="res://Scenes/player.tscn" id="1_b0fum"]
 [ext_resource type="PackedScene" uid="uid://dbpln8dbwu6ax" path="res://Scenes/villager.tscn" id="2_jkl10"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Test Scene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_b0fum")]
 position = Vector2(6, 12)
