@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dommo7po12eyx"]
+
+[ext_resource type="Script" uid="uid://de85b7ljjxs17" path="res://script/player.gd" id="1_v0iea"]
+
+[sub_resource type="Gradient" id="Gradient_cvnsp"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6t5aa"]
+gradient = SubResource("Gradient_cvnsp")
+width = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgqql"]
+size = Vector2(162, 164)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_v0iea")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(162.5, 162.5)
+texture = SubResource("GradientTexture1D_6t5aa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vgqql")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_smoothed = true
