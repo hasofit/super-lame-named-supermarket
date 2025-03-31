@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -14,6 +15,10 @@ func _physics_process(delta: float) -> void:
 	directionX = Input.get_axis("move_left", "move_right")
 	if directionX:
 		velocity.x = directionX * SPEED
+		if directionX < 0:
+			sprite_2d.flip_h = false
+		else:
+			sprite_2d.flip_h = true
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
