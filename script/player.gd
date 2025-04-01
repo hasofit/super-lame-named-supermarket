@@ -19,6 +19,8 @@ func _physics_process(delta: float) -> void:
 	directionX = Input.get_axis("move_left", "move_right")
 	if directionX:
 		velocity.x = directionX * SPEED
+		if directionX > 0: sprite_2d.flip_h = true
+		else: sprite_2d.flip_h = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
