@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b17fdd4imlc7c"]
+[gd_scene load_steps=4 format=3 uid="uid://b17fdd4imlc7c"]
 
 [ext_resource type="PackedScene" uid="uid://dommo7po12eyx" path="res://Scenes/player.tscn" id="1_b0fum"]
 [ext_resource type="PackedScene" uid="uid://dbpln8dbwu6ax" path="res://Scenes/villager.tscn" id="2_jkl10"]
+[ext_resource type="AudioStream" uid="uid://n6dcwcjp6nj4" path="res://sounds/Super-Market-Music.ogg" id="3_4nf2p"]
 
 [node name="Test Scene" type="Node2D"]
 
@@ -10,3 +11,8 @@ position = Vector2(6, 12)
 
 [node name="Villager" parent="." instance=ExtResource("2_jkl10")]
 position = Vector2(-155, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4nf2p")
+volume_db = 10.0
+autoplay = true
