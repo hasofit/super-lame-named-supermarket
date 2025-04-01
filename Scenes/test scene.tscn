@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b17fdd4imlc7c"]
+[gd_scene load_steps=5 format=3 uid="uid://b17fdd4imlc7c"]
 
 [ext_resource type="PackedScene" uid="uid://dommo7po12eyx" path="res://Scenes/player.tscn" id="1_b0fum"]
 [ext_resource type="PackedScene" uid="uid://dbpln8dbwu6ax" path="res://Scenes/villager.tscn" id="2_jkl10"]
 [ext_resource type="AudioStream" uid="uid://n6dcwcjp6nj4" path="res://sounds/Super-Market-Music.ogg" id="3_4nf2p"]
+[ext_resource type="PackedScene" uid="uid://c3oxpix7ua2ev" path="res://Scenes/shelf.tscn" id="4_58ov2"]
 
 [node name="Test Scene" type="Node2D"]
 
@@ -16,3 +17,7 @@ position = Vector2(-155, 0)
 stream = ExtResource("3_4nf2p")
 volume_db = 10.0
 autoplay = true
+
+[node name="Shelf" parent="." instance=ExtResource("4_58ov2")]
+position = Vector2(143, 15)
+scale = Vector2(3.04, 3.04)
