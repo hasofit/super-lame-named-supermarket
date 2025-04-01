@@ -36,3 +36,14 @@ shape = SubResource("CapsuleShape2D_vgqql")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 limit_smoothed = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+rotation = 1.5708
+
+[node name="RayCast2D3" type="RayCast2D" parent="."]
+rotation = -1.5708
+
+[node name="RayCast2D4" type="RayCast2D" parent="."]
+rotation = -3.14159

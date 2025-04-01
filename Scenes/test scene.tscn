@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b17fdd4imlc7c"]
+[gd_scene load_steps=7 format=3 uid="uid://b17fdd4imlc7c"]
 
 [ext_resource type="PackedScene" uid="uid://dommo7po12eyx" path="res://Scenes/player.tscn" id="1_b0fum"]
 [ext_resource type="PackedScene" uid="uid://dbpln8dbwu6ax" path="res://Scenes/villager.tscn" id="2_jkl10"]
 [ext_resource type="AudioStream" uid="uid://n6dcwcjp6nj4" path="res://sounds/Super-Market-Music.ogg" id="3_4nf2p"]
-[ext_resource type="Script" uid="uid://bhkfqwl72dfxu" path="res://Scenes/villager_movment.gd" id="3_58ov2"]
+[ext_resource type="Script" uid="uid://bs46v6ianx132" path="res://script/villager_movment.gd" id="3_58ov2"]
+[ext_resource type="PackedScene" uid="uid://c3oxpix7ua2ev" path="res://Scenes/shelf.tscn" id="5_op41l"]
 
 [sub_resource type="Curve2D" id="Curve2D_op41l"]
 _data = {
@@ -37,3 +38,7 @@ rotation = -1.72551
 
 [node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/Villager"]
 position = Vector2(-1.52588e-05, 2)
+
+[node name="Shelf" parent="." instance=ExtResource("5_op41l")]
+position = Vector2(169, -15)
+scale = Vector2(3.5, 3.5)
