@@ -20,7 +20,6 @@ position = Vector2(6, 12)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-44, -19)
 stream = ExtResource("3_4nf2p")
-volume_db = 10.0
 autoplay = true
 
 [node name="Path2D" type="Path2D" parent="."]
