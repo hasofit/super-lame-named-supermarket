@@ -17,6 +17,7 @@ animations = [{
 height = 66.0
 
 [node name="Villager" type="Area2D"]
+position = Vector2(100, 100)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.108, 0.108)
