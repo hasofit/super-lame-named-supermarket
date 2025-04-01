@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dommo7po12eyx"]
+
+[ext_resource type="Script" uid="uid://de85b7ljjxs17" path="res://script/player.gd" id="1_v0iea"]
+[ext_resource type="Texture2D" uid="uid://bhy73ur2phtuj" path="res://sprites/placeholders/test guy.png" id="2_cvnsp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6t5aa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cvnsp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vgqql"]
+radius = 14.0
+height = 58.0
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("1_v0iea")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, 0)
+scale = Vector2(0.1075, 0.1075)
+sprite_frames = SubResource("SpriteFrames_6t5aa")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_vgqql")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+limit_smoothed = true
