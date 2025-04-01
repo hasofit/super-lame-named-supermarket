@@ -1,22 +1,52 @@
-[gd_scene load_steps=5 format=3 uid="uid://dommo7po12eyx"]
+[gd_scene load_steps=9 format=3 uid="uid://dommo7po12eyx"]
 
 [ext_resource type="Script" uid="uid://de85b7ljjxs17" path="res://script/player.gd" id="1_v0iea"]
-[ext_resource type="Texture2D" uid="uid://bhy73ur2phtuj" path="res://sprites/placeholders/test guy.png" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://omhausm6oqoh" path="res://sprites/player.png" id="2_cvnsp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6t5aa"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_cvnsp")
+"texture": SubResource("AtlasTexture_fkybt")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvnsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t5aa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgqql")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vgqql"]
-radius = 14.0
-height = 58.0
+radius = 11.0
+height = 38.0
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 255
@@ -24,13 +54,14 @@ collision_mask = 255
 script = ExtResource("1_v0iea")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3, 0)
-scale = Vector2(0.1075, 0.1075)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_6t5aa")
-animation = &"idle"
+animation = &"walking"
 autoplay = "idle"
+frame_progress = 0.92299
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_vgqql")
 
 [node name="Camera2D" type="Camera2D" parent="."]

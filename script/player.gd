@@ -29,6 +29,11 @@ func _physics_process(delta: float) -> void:
 		velocity.y = directionY * SPEED
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
+	
+	if !directionX and !directionY:
+		sprite_2d.animation = "idle"
+	else:
+		sprite_2d.animation = "walking"
 
 	move_and_slide()
 	
