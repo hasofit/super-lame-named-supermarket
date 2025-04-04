@@ -1,7 +1,7 @@
 extends PathFollow2D
 
 var moving = true
-var speed = 0.1
+var speed = 0.05
 @onready var timer: Timer = $Villager/Timer
 
 func _process(delta):

@@ -48,16 +48,17 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("interact"):
 		if found == "Shelf":
-			print(inventory)
 			if inventory.has("Milk"):
 				var new_milk = MILK.instantiate()
 				get_parent().add_child(new_milk)
 				new_milk.global_position = foundbody.item_pos_calc(new_milk)
+				new_milk.rotation = foundbody.rotation
 				inventory.erase("Milk")
 			elif inventory.has("Chips"):
 				var new_chips = CHIPS.instantiate()
 				get_parent().add_child(new_chips)
 				new_chips.global_position = foundbody.item_pos_calc(new_chips)
+				new_chips.rotation = foundbody.rotation
 				inventory.erase("Chips")
 
 func shelf_detect(raycast):
