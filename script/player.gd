@@ -9,9 +9,6 @@ extends CharacterBody2D
 @export var SPEED = 300.0
 @export var inventory = []
 
-const MILK = preload("res://Scenes/milk.tscn")
-const CHIPS = preload("res://Scenes/chips.tscn")
-
 var directionX
 var directionY
 
@@ -51,19 +48,8 @@ func _process(delta):
 	shelf_detect($RayCast2D)
 
 	if Input.is_action_just_pressed("interact") and found == "Shelf" and is_instance_valid(foundbody):
-		var item_to_place
-		if inventory.has("Milk"):
-			item_to_place = MILK.instantiate()
-			inventory.erase("Milk")
-		elif inventory.has("Chips"):
-			item_to_place = CHIPS.instantiate()
-			inventory.erase("Chips")
+		foundbody.place_item(inventory)
 		
-		if item_to_place:
-			get_parent().add_child(item_to_place)
-			item_to_place.global_position = foundbody.item_pos_calc(item_to_place)
-			item_to_place.rotation = foundbody.rotation
-
 func shelf_detect(raycast):
 	if raycast.is_colliding():
 		var collider = raycast.get_collider()
