@@ -14,8 +14,9 @@ const CHIPS = preload("res://Scenes/chips.tscn")
 
 var directionX
 var directionY
-var found
-var foundbody
+
+var found = ""
+var foundbody: Node = null
 
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
@@ -46,29 +47,32 @@ func _physics_process(delta: float) -> void:
 	shelf_detect(ray_cast_2d_3)
 	shelf_detect(ray_cast_2d_4)
 
-	if Input.is_action_just_pressed("interact"):
-		if found == "Shelf":
-			if inventory.has("Milk"):
-				var new_milk = MILK.instantiate()
-				get_parent().add_child(new_milk)
-				new_milk.global_position = foundbody.item_pos_calc(new_milk)
-				new_milk.rotation = foundbody.rotation
-				inventory.erase("Milk")
-			elif inventory.has("Chips"):
-				var new_chips = CHIPS.instantiate()
-				get_parent().add_child(new_chips)
-				new_chips.global_position = foundbody.item_pos_calc(new_chips)
-				new_chips.rotation = foundbody.rotation
-				inventory.erase("Chips")
+func _process(delta):
+	shelf_detect($RayCast2D)
+
+	if Input.is_action_just_pressed("interact") and found == "Shelf" and is_instance_valid(foundbody):
+		var item_to_place
+		if inventory.has("Milk"):
+			item_to_place = MILK.instantiate()
+			inventory.erase("Milk")
+		elif inventory.has("Chips"):
+			item_to_place = CHIPS.instantiate()
+			inventory.erase("Chips")
+		
+		if item_to_place:
+			get_parent().add_child(item_to_place)
+			item_to_place.global_position = foundbody.item_pos_calc(item_to_place)
+			item_to_place.rotation = foundbody.rotation
 
 func shelf_detect(raycast):
 	if raycast.is_colliding():
 		var collider = raycast.get_collider()
-		var col_point = raycast.get_collision_point()
-		var local_col_point = to_local(col_point)
 		if collider.name == "Shelf":
 			found = "Shelf"
 			foundbody = collider
+		else:
+			found = ""
+			foundbody = null
 
 
 func _on_milk_button_pressed() -> void:
