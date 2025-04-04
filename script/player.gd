@@ -7,11 +7,14 @@ extends CharacterBody2D
 @onready var ray_cast_2d_4: RayCast2D = $RayCast2D4
 
 @export var SPEED = 300.0
+@export var slot = []
+
+const MILK = preload("res://Scenes/milk.tscn")
 
 var directionX
 var directionY
-
 var found
+var foundbody
 
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
@@ -44,6 +47,13 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("interact"):
 		if found == "Shelf":
+			if slot.has("Milk"):
+				var new_milk = MILK.instantiate()
+				get_parent().add_child(new_milk)
+				new_milk.global_position = foundbody.item_pos_calc(new_milk)
+				
+				print("spawned milk")
+				
 			print("interacted with shelf")
 func shelf_detect(raycast):
 	if raycast.is_colliding():
@@ -52,3 +62,4 @@ func shelf_detect(raycast):
 		var local_col_point = to_local(col_point)
 		if collider.name == "Shelf":
 			found = "Shelf"
+			foundbody = collider

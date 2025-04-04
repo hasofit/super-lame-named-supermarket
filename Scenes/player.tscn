@@ -52,6 +52,7 @@ height = 38.0
 collision_layer = 255
 collision_mask = 255
 script = ExtResource("1_v0iea")
+slot = ["Milk"]
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
