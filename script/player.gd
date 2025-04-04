@@ -7,9 +7,10 @@ extends CharacterBody2D
 @onready var ray_cast_2d_4: RayCast2D = $RayCast2D4
 
 @export var SPEED = 300.0
-@export var slot = []
+@export var inventory = []
 
 const MILK = preload("res://Scenes/milk.tscn")
+const CHIPS = preload("res://Scenes/chips.tscn")
 
 var directionX
 var directionY
@@ -47,14 +48,18 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("interact"):
 		if found == "Shelf":
-			if slot.has("Milk"):
+			print(inventory)
+			if inventory.has("Milk"):
 				var new_milk = MILK.instantiate()
 				get_parent().add_child(new_milk)
 				new_milk.global_position = foundbody.item_pos_calc(new_milk)
-				
-				print("spawned milk")
-				
-			print("interacted with shelf")
+				inventory.erase("Milk")
+			elif inventory.has("Chips"):
+				var new_chips = CHIPS.instantiate()
+				get_parent().add_child(new_chips)
+				new_chips.global_position = foundbody.item_pos_calc(new_chips)
+				inventory.erase("Chips")
+
 func shelf_detect(raycast):
 	if raycast.is_colliding():
 		var collider = raycast.get_collider()
@@ -63,3 +68,10 @@ func shelf_detect(raycast):
 		if collider.name == "Shelf":
 			found = "Shelf"
 			foundbody = collider
+
+
+func _on_milk_button_pressed() -> void:
+	inventory.append("Milk")
+
+func _on_chips_button_pressed() -> void:
+	inventory.append("Chips")

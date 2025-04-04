@@ -6,9 +6,24 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pp4lf"]
 size = Vector2(54, 46)
 
-[node name="Shelf" type="StaticBody2D"]
+[node name="Shelf" type="StaticBody2D" node_paths=PackedStringArray("marker1", "marker2", "marker3", "marker4", "marker5", "marker6", "marker7", "marker8", "marker9", "marker10", "marker11", "marker12", "marker13", "marker14", "marker15")]
 z_index = 1
 script = ExtResource("1_pp4lf")
+marker1 = NodePath("Marker2D")
+marker2 = NodePath("Marker2D2")
+marker3 = NodePath("Marker2D4")
+marker4 = NodePath("Marker2D3")
+marker5 = NodePath("Marker2D5")
+marker6 = NodePath("Marker2D6")
+marker7 = NodePath("Marker2D7")
+marker8 = NodePath("Marker2D8")
+marker9 = NodePath("Marker2D9")
+marker10 = NodePath("Marker2D10")
+marker11 = NodePath("Marker2D11")
+marker12 = NodePath("Marker2D12")
+marker13 = NodePath("Marker2D13")
+marker14 = NodePath("Marker2D14")
+marker15 = NodePath("Marker2D15")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1.6875, 1.4375)
@@ -18,28 +33,46 @@ texture = ExtResource("1_ndc05")
 position = Vector2(0, 23)
 
 [node name="Marker2D2" type="Marker2D" parent="."]
-position = Vector2(-20, 23)
+position = Vector2(10, 23)
+
+[node name="Marker2D4" type="Marker2D" parent="."]
+position = Vector2(-10, 23)
 
 [node name="Marker2D3" type="Marker2D" parent="."]
 position = Vector2(19, 23)
 
-[node name="Marker2D4" type="Marker2D" parent="."]
-position = Vector2(0, -6)
-
 [node name="Marker2D5" type="Marker2D" parent="."]
-position = Vector2(-20, -6)
+position = Vector2(-19, 23)
 
 [node name="Marker2D6" type="Marker2D" parent="."]
-position = Vector2(19, -6)
+position = Vector2(0, 7)
 
 [node name="Marker2D7" type="Marker2D" parent="."]
-position = Vector2(19, 7)
+position = Vector2(10, 7)
 
 [node name="Marker2D8" type="Marker2D" parent="."]
-position = Vector2(-20, 7)
+position = Vector2(-10, 7)
 
 [node name="Marker2D9" type="Marker2D" parent="."]
-position = Vector2(0, 7)
+position = Vector2(19, 7)
+
+[node name="Marker2D10" type="Marker2D" parent="."]
+position = Vector2(-19, 7)
+
+[node name="Marker2D11" type="Marker2D" parent="."]
+position = Vector2(0, -6)
+
+[node name="Marker2D12" type="Marker2D" parent="."]
+position = Vector2(10, -6)
+
+[node name="Marker2D13" type="Marker2D" parent="."]
+position = Vector2(-10, -6)
+
+[node name="Marker2D14" type="Marker2D" parent="."]
+position = Vector2(19, -6)
+
+[node name="Marker2D15" type="Marker2D" parent="."]
+position = Vector2(-19, -6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_pp4lf")
