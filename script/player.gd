@@ -53,7 +53,8 @@ func _process(delta):
 func shelf_detect(raycast):
 	if raycast.is_colliding():
 		var collider = raycast.get_collider()
-		if collider.name == "Shelf":
+		print(collider.get_groups())
+		if collider.get_groups().has("Inter"):
 			found = "Shelf"
 			foundbody = collider
 		else:

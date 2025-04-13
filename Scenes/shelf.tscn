@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pp4lf"]
 size = Vector2(54, 46)
 
-[node name="Shelf" type="StaticBody2D"]
+[node name="Shelf" type="StaticBody2D" groups=["Inter"]]
 z_index = 1
 script = ExtResource("1_pp4lf")
 markers = Array[NodePath]([NodePath("Marker2D"), NodePath("Marker2D2"), NodePath("Marker2D4"), NodePath("Marker2D3"), NodePath("Marker2D5"), NodePath("Marker2D6"), NodePath("Marker2D7"), NodePath("Marker2D8"), NodePath("Marker2D9"), NodePath("Marker2D10"), NodePath("Marker2D11"), NodePath("Marker2D12"), NodePath("Marker2D13"), NodePath("Marker2D14"), NodePath("Marker2D15")])
