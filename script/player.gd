@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var ray_cast_2d_2: RayCast2D = $RayCast2D2
 @onready var ray_cast_2d_3: RayCast2D = $RayCast2D3
 @onready var ray_cast_2d_4: RayCast2D = $RayCast2D4
+@onready var inventory_label: Label = $"../CanvasLayer/Inventory"
 
 @export var SPEED = 300.0
 @export var inventory = []
@@ -16,6 +17,8 @@ var found = ""
 var foundbody: Node = null
 
 func _physics_process(delta: float) -> void:
+	inventory_label.text = str(inventory)
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	directionX = Input.get_axis("move_left", "move_right")
@@ -53,7 +56,6 @@ func _process(delta):
 func shelf_detect(raycast):
 	if raycast.is_colliding():
 		var collider = raycast.get_collider()
-		print(collider.get_groups())
 		if collider.get_groups().has("Inter"):
 			found = "Shelf"
 			foundbody = collider

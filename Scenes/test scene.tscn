@@ -59,18 +59,6 @@ position = Vector2(-29, -343)
 rotation = 1.72551
 rotates = false
 loop = false
-script = ExtResource("3_58ov2")
-
-[node name="Villager" parent="Path2D/PathFollow2D" instance=ExtResource("2_jkl10")]
-position = Vector2(0, 0)
-rotation = -1.72551
-
-[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/Villager"]
-position = Vector2(-1.52588e-05, 2)
-
-[node name="Timer" type="Timer" parent="Path2D/PathFollow2D/Villager"]
-wait_time = 10.0
-one_shot = true
 
 [node name="Shelf" parent="." instance=ExtResource("5_op41l")]
 position = Vector2(51, 63)
@@ -158,6 +146,32 @@ offset_bottom = 121.0
 scale = Vector2(2.8, 2.8)
 text = "add chips"
 
-[connection signal="timeout" from="Path2D/PathFollow2D/Villager/Timer" to="Path2D/PathFollow2D" method="_on_timer_timeout"]
+[node name="Inventory" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Inv: "
+
+[node name="Villager" parent="." instance=ExtResource("2_jkl10")]
+position = Vector2(-255, -350)
+script = ExtResource("3_58ov2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Villager"]
+position = Vector2(-1.52588e-05, 2)
+
+[node name="Timer" type="Timer" parent="Villager"]
+wait_time = 10.0
+one_shot = true
+
 [connection signal="pressed" from="CanvasLayer/Milk Button" to="Player" method="_on_milk_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Chips Button" to="Player" method="_on_chips_button_pressed"]
+[connection signal="timeout" from="Villager/Timer" to="Path2D/PathFollow2D" method="_on_timer_timeout"]

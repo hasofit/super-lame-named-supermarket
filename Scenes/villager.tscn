@@ -1,12 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbpln8dbwu6ax"]
+[gd_scene load_steps=7 format=3 uid="uid://dbpln8dbwu6ax"]
 
-[ext_resource type="Texture2D" uid="uid://8rjx0yxrn076" path="res://sprites/placeholders/Hasofit's pixel art with bg upscaled.png" id="1_clim2"]
+[ext_resource type="Texture2D" uid="uid://rnhfchs05k0p" path="res://sprites/Customersides.png" id="1_clim2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7u53x"]
+atlas = ExtResource("1_clim2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gn4cm"]
+atlas = ExtResource("1_clim2")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kk55i"]
+atlas = ExtResource("1_clim2")
+region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7u53x"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_clim2")
+"texture": SubResource("AtlasTexture_7u53x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gn4cm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kk55i")
 }],
 "loop": true,
 "name": &"idle",
@@ -21,7 +39,8 @@ z_index = 2
 position = Vector2(100, 100)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.108, 0.108)
+position = Vector2(0, 12)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_7u53x")
 animation = &"idle"
 autoplay = "idle"
