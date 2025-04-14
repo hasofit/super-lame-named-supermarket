@@ -75,6 +75,8 @@ func _process(delta: float) -> void:
 			foundbody.place_item(inventory)
 		elif found == "Order":
 			foundbody.open_menu(order_menu, self)
+		elif found == "Cash":
+			foundbody.pay_out(self, inventory)
 
 func shelf_detect(raycast: RayCast2D) -> void:
 	if raycast.is_colliding():
@@ -84,6 +86,9 @@ func shelf_detect(raycast: RayCast2D) -> void:
 			foundbody = collider
 		elif collider.get_groups().has("Inter") and collider.get_groups().has("Order"):
 			found = "Order"
+			foundbody = collider
+		elif collider.get_groups().has("Inter") and collider.get_groups().has("Cash"):
+			found = "Cash"
 			foundbody = collider
 		else:
 			found = ""

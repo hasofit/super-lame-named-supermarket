@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbpln8dbwu6ax"]
+[gd_scene load_steps=8 format=3 uid="uid://dbpln8dbwu6ax"]
 
+[ext_resource type="Script" uid="uid://bs46v6ianx132" path="res://script/villager_movment.gd" id="1_7u53x"]
 [ext_resource type="Texture2D" uid="uid://rnhfchs05k0p" path="res://sprites/Customersides.png" id="1_clim2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7u53x"]
@@ -37,6 +38,7 @@ height = 66.0
 [node name="Villager" type="Area2D"]
 z_index = 2
 position = Vector2(100, 100)
+script = ExtResource("1_7u53x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 12)
@@ -48,3 +50,22 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 20)
 shape = SubResource("CapsuleShape2D_clim2")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0, 20)
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2(0, 20)
+rotation = 1.5708
+
+[node name="RayCast2D3" type="RayCast2D" parent="."]
+position = Vector2(0, 20)
+rotation = -1.5708
+
+[node name="RayCast2D4" type="RayCast2D" parent="."]
+position = Vector2(0, 20)
+rotation = -3.14159
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true

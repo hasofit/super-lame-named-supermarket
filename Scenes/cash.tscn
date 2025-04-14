@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://00iowefr4wre"]
+
+[ext_resource type="Script" uid="uid://ctua6ncoiecky" path="res://script/cash.gd" id="1_g4qth"]
+[ext_resource type="Texture2D" uid="uid://clkc7eulphufi" path="res://sprites/supplymenu.png" id="2_2xbqq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mw2j7"]
+size = Vector2(32, 27)
+
+[node name="Cash" type="StaticBody2D" groups=["Cash", "Inter"]]
+script = ExtResource("1_g4qth")
+
+[node name="Supplymenu" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 1, 1)
+texture = ExtResource("2_2xbqq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_mw2j7")

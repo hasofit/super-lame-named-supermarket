@@ -4,6 +4,7 @@ var moving = true
 var speed = 0.05
 
 @onready var path_follow_2d: PathFollow2D = $"../Path2D/PathFollow2D"
+@onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var timer: Timer = $Timer
 
 func _process(delta):
