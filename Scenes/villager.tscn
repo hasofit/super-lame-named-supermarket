@@ -41,31 +41,37 @@ position = Vector2(100, 100)
 script = ExtResource("1_7u53x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 12)
+position = Vector2(0, -41)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_7u53x")
 animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 20)
+position = Vector2(0, -33)
 shape = SubResource("CapsuleShape2D_clim2")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(0, 20)
+position = Vector2(0, -33)
+scale = Vector2(2.91519, 2.91519)
 
 [node name="RayCast2D2" type="RayCast2D" parent="."]
-position = Vector2(0, 20)
+position = Vector2(0, -33)
 rotation = 1.5708
+scale = Vector2(2.91519, 2.91519)
 
 [node name="RayCast2D3" type="RayCast2D" parent="."]
-position = Vector2(0, 20)
+position = Vector2(0, -33)
 rotation = -1.5708
+scale = Vector2(2.91519, 2.91519)
 
 [node name="RayCast2D4" type="RayCast2D" parent="."]
-position = Vector2(0, 20)
+position = Vector2(0, -33)
 rotation = -3.14159
+scale = Vector2(2.91519, 2.91519)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

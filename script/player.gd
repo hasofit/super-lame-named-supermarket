@@ -23,7 +23,7 @@ var foundbody: Node = null
 
 var milk_price = 5
 var chips_price = 7
-var player_money = 20
+var player_money = 100000
 
 func _ready() -> void:
 	order_menu.hide()

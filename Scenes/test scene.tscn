@@ -12,9 +12,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_op41l"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -29, -343, 0, 0, 0, 0, -27, 441, 0, 0, 0, 0, 514, 441, 0, 0, 0, 0, 514, -163, 0, 0, 0, 0, 964, -163, 0, 0, 0, 0, 992, 441, 0, 0, 0, 0, 1450, 441, 0, 0, 0, 0, 1450, -164)
+"points": PackedVector2Array(0, 0, 0, 0, -33, -299, 0, 0, 0, 0, -31, -177, 0, 0, 0, 0, 922, -167, 0, 0, 0, 0, 914, -14, 0, 0, 0, 0, 102, -17, 0, 0, 0, 0, 90, 217, 0, 0, 0, 0, 927, 217, 0, 0, 0, 0, 928, 324, 0, 0, 0, 0, 96, 324, 0, 0, 0, 0, 95, 555, 0, 0, 0, 0, 929, 563, 0, 0, 0, 0, 929, 679, 0, 0, 0, 0, 97, 676, 0, 0, 0, 0, 92, 933, 0, 0, 0, 0, 930, 933, 0, 0, 0, 0, 931, 1008, 0, 0, 0, 0, 87, 1002, 0, 0, 0, 0, 83, 1282, 0, 0, 0, 0, 935, 1278, 0, 0, 0, 0, 1560, 1277, 0, 0, 0, 0, 1534, -260)
 }
-point_count = 8
+point_count = 21
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wv3x6"]
 texture = ExtResource("6_wv3x6")
@@ -57,70 +57,1009 @@ position = Vector2(-226, -7)
 curve = SubResource("Curve2D_op41l")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(-29, -343)
+position = Vector2(-33, -299)
 rotation = 1.72551
 rotates = false
-loop = false
 
 [node name="Shelf" parent="." instance=ExtResource("5_op41l")]
-position = Vector2(51, 63)
-rotation = -1.5708
+position = Vector2(385, -301)
 scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf"]
+position = Vector2(-19, -6)
 
 [node name="Shelf2" parent="." instance=ExtResource("5_op41l")]
-position = Vector2(51, 252)
-rotation = -1.5708
+position = Vector2(574, -301)
 scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf2"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf2"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf2"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf2"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf2"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf2"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf2"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf2"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf2"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf2"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf2"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf2"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf2"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf2"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf2"]
+position = Vector2(-19, -6)
 
 [node name="Shelf3" parent="." instance=ExtResource("5_op41l")]
-position = Vector2(-110, 252)
-rotation = 1.5708
+position = Vector2(7.00003, -301)
 scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf3"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf3"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf3"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf3"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf3"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf3"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf3"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf3"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf3"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf3"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf3"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf3"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf3"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf3"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf3"]
+position = Vector2(-19, -6)
 
 [node name="Shelf4" parent="." instance=ExtResource("5_op41l")]
-position = Vector2(-110, 63)
-rotation = 1.5708
+position = Vector2(196, -301)
 scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf4"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf4"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf4"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf4"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf4"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf4"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf4"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf4"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf4"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf4"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf4"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf4"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf4"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf4"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf4"]
+position = Vector2(-19, -6)
 
 [node name="Shelf5" parent="." instance=ExtResource("5_op41l")]
-position = Vector2(570, 63)
-rotation = -1.5708
+position = Vector2(385, 71)
 scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf5"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf5"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf5"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf5"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf5"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf5"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf5"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf5"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf5"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf5"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf5"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf5"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf5"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf5"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf5"]
+position = Vector2(-19, -6)
 
 [node name="Shelf6" parent="." instance=ExtResource("5_op41l")]
-position = Vector2(570, 252)
-rotation = -1.5708
+position = Vector2(574, 71)
 scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf6"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf6"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf6"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf6"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf6"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf6"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf6"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf6"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf6"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf6"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf6"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf6"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf6"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf6"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf6"]
+position = Vector2(-19, -6)
 
 [node name="Shelf7" parent="." instance=ExtResource("5_op41l")]
-position = Vector2(409, 252)
-rotation = 1.5708
+position = Vector2(7.00003, 71)
 scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf7"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf7"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf7"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf7"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf7"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf7"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf7"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf7"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf7"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf7"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf7"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf7"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf7"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf7"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf7"]
+position = Vector2(-19, -6)
 
 [node name="Shelf8" parent="." instance=ExtResource("5_op41l")]
-position = Vector2(409, 63)
-rotation = 1.5708
+position = Vector2(196, 71)
 scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf8"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf8"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf8"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf8"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf8"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf8"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf8"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf8"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf8"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf8"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf8"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf8"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf8"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf8"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf8"]
+position = Vector2(-19, -6)
 
 [node name="Shelf9" parent="." instance=ExtResource("5_op41l")]
-position = Vector2(1071, 63)
-rotation = -1.5708
+position = Vector2(385, 415)
 scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf9"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf9"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf9"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf9"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf9"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf9"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf9"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf9"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf9"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf9"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf9"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf9"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf9"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf9"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf9"]
+position = Vector2(-19, -6)
 
 [node name="Shelf10" parent="." instance=ExtResource("5_op41l")]
-position = Vector2(1071, 252)
-rotation = -1.5708
+position = Vector2(574, 415)
 scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf10"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf10"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf10"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf10"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf10"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf10"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf10"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf10"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf10"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf10"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf10"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf10"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf10"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf10"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf10"]
+position = Vector2(-19, -6)
 
 [node name="Shelf11" parent="." instance=ExtResource("5_op41l")]
-position = Vector2(910, 252)
-rotation = 1.5708
+position = Vector2(7.00003, 415)
 scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf11"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf11"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf11"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf11"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf11"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf11"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf11"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf11"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf11"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf11"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf11"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf11"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf11"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf11"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf11"]
+position = Vector2(-19, -6)
 
 [node name="Shelf12" parent="." instance=ExtResource("5_op41l")]
-position = Vector2(910, 63)
-rotation = 1.5708
+position = Vector2(196, 415)
 scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf12"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf12"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf12"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf12"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf12"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf12"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf12"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf12"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf12"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf12"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf12"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf12"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf12"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf12"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf12"]
+position = Vector2(-19, -6)
+
+[node name="Shelf13" parent="." instance=ExtResource("5_op41l")]
+position = Vector2(385, 769)
+scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf13"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf13"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf13"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf13"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf13"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf13"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf13"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf13"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf13"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf13"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf13"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf13"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf13"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf13"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf13"]
+position = Vector2(-19, -6)
+
+[node name="Shelf14" parent="." instance=ExtResource("5_op41l")]
+position = Vector2(574, 769)
+scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf14"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf14"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf14"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf14"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf14"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf14"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf14"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf14"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf14"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf14"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf14"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf14"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf14"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf14"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf14"]
+position = Vector2(-19, -6)
+
+[node name="Shelf15" parent="." instance=ExtResource("5_op41l")]
+position = Vector2(7.00003, 769)
+scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf15"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf15"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf15"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf15"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf15"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf15"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf15"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf15"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf15"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf15"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf15"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf15"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf15"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf15"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf15"]
+position = Vector2(-19, -6)
+
+[node name="Shelf16" parent="." instance=ExtResource("5_op41l")]
+position = Vector2(196, 769)
+scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf16"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf16"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf16"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf16"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf16"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf16"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf16"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf16"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf16"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf16"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf16"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf16"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf16"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf16"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf16"]
+position = Vector2(-19, -6)
+
+[node name="Shelf17" parent="." instance=ExtResource("5_op41l")]
+position = Vector2(385, 1102)
+scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf17"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf17"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf17"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf17"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf17"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf17"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf17"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf17"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf17"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf17"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf17"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf17"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf17"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf17"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf17"]
+position = Vector2(-19, -6)
+
+[node name="Shelf18" parent="." instance=ExtResource("5_op41l")]
+position = Vector2(574, 1102)
+scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf18"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf18"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf18"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf18"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf18"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf18"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf18"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf18"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf18"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf18"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf18"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf18"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf18"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf18"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf18"]
+position = Vector2(-19, -6)
+
+[node name="Shelf19" parent="." instance=ExtResource("5_op41l")]
+position = Vector2(7, 1102)
+scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf19"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf19"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf19"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf19"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf19"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf19"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf19"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf19"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf19"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf19"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf19"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf19"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf19"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf19"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf19"]
+position = Vector2(-19, -6)
+
+[node name="Shelf20" parent="." instance=ExtResource("5_op41l")]
+position = Vector2(196, 1102)
+scale = Vector2(3.5, 3.5)
+markers = Array[NodePath]([NodePath("Marker2D16"), NodePath("Marker2D17"), NodePath("Marker2D18"), NodePath("Marker2D19"), NodePath("Marker2D20"), NodePath("Marker2D21"), NodePath("Marker2D22"), NodePath("Marker2D23"), NodePath("Marker2D24"), NodePath("Marker2D25"), NodePath("Marker2D26"), NodePath("Marker2D27"), NodePath("Marker2D28"), NodePath("Marker2D29"), NodePath("Marker2D30")])
+
+[node name="Marker2D16" type="Marker2D" parent="Shelf20"]
+position = Vector2(0, 23)
+
+[node name="Marker2D17" type="Marker2D" parent="Shelf20"]
+position = Vector2(10, 23)
+
+[node name="Marker2D18" type="Marker2D" parent="Shelf20"]
+position = Vector2(-10, 23)
+
+[node name="Marker2D19" type="Marker2D" parent="Shelf20"]
+position = Vector2(19, 23)
+
+[node name="Marker2D20" type="Marker2D" parent="Shelf20"]
+position = Vector2(-19, 23)
+
+[node name="Marker2D21" type="Marker2D" parent="Shelf20"]
+position = Vector2(0, 7)
+
+[node name="Marker2D22" type="Marker2D" parent="Shelf20"]
+position = Vector2(10, 7)
+
+[node name="Marker2D23" type="Marker2D" parent="Shelf20"]
+position = Vector2(-10, 7)
+
+[node name="Marker2D24" type="Marker2D" parent="Shelf20"]
+position = Vector2(19, 7)
+
+[node name="Marker2D25" type="Marker2D" parent="Shelf20"]
+position = Vector2(-19, 7)
+
+[node name="Marker2D26" type="Marker2D" parent="Shelf20"]
+position = Vector2(0, -6)
+
+[node name="Marker2D27" type="Marker2D" parent="Shelf20"]
+position = Vector2(10, -6)
+
+[node name="Marker2D28" type="Marker2D" parent="Shelf20"]
+position = Vector2(-10, -6)
+
+[node name="Marker2D29" type="Marker2D" parent="Shelf20"]
+position = Vector2(19, -6)
+
+[node name="Marker2D30" type="Marker2D" parent="Shelf20"]
+position = Vector2(-19, -6)
 
 [node name="Walls" type="TileMap" parent="."]
 scale = Vector2(2, 2)
@@ -163,6 +1102,7 @@ offset_right = 75.0
 offset_bottom = 31.0
 scale = Vector2(2.8, 2.8)
 text = "add milk"
+metadata/_edit_use_anchors_ = true
 
 [node name="Chips Button" type="Button" parent="CanvasLayer/Order Menu"]
 layout_mode = 0
@@ -171,6 +1111,7 @@ offset_right = 82.0
 offset_bottom = 121.0
 scale = Vector2(2.8, 2.8)
 text = "add chips"
+metadata/_edit_use_anchors_ = true
 
 [node name="Exit Order" type="Button" parent="CanvasLayer/Order Menu"]
 layout_mode = 1
@@ -201,14 +1142,26 @@ text = "0$"
 
 [node name="Order Thingy" parent="." instance=ExtResource("7_t42ey")]
 z_index = 2
-position = Vector2(338, -139)
+position = Vector2(-294, 819)
 scale = Vector2(5, 5)
 
 [node name="Villager" parent="." instance=ExtResource("2_jkl10")]
 position = Vector2(-255, -350)
 
 [node name="Cash" parent="." instance=ExtResource("10_hf2ew")]
-position = Vector2(540, -142)
+position = Vector2(1187, 761)
+scale = Vector2(5, 5)
+
+[node name="Cash2" parent="." instance=ExtResource("10_hf2ew")]
+position = Vector2(1187, 473)
+scale = Vector2(5, 5)
+
+[node name="Cash3" parent="." instance=ExtResource("10_hf2ew")]
+position = Vector2(1187, 180)
+scale = Vector2(5, 5)
+
+[node name="Cash4" parent="." instance=ExtResource("10_hf2ew")]
+position = Vector2(1187, -74)
 scale = Vector2(5, 5)
 
 [connection signal="pressed" from="CanvasLayer/Order Menu/Milk Button" to="Player" method="_on_milk_button_pressed"]

@@ -11,3 +11,4 @@ func pay_out(player, inventory):
 		else:
 			player.player_money += 0
 			inventory.erase(i)
+		print(player.player_money)
