@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://m4egcjuuamkt"]
+
+[ext_resource type="Texture2D" uid="uid://clkc7eulphufi" path="res://sprites/supplymenu.png" id="1_20mbj"]
+[ext_resource type="Script" uid="uid://u6hkfxmkdoln" path="res://script/order_thingy.gd" id="1_q7n3l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7n3l"]
+size = Vector2(32, 27)
+
+[node name="Order Thingy" type="StaticBody2D" groups=["Inter", "Order"]]
+script = ExtResource("1_q7n3l")
+
+[node name="Supplymenu" type="Sprite2D" parent="."]
+texture = ExtResource("1_20mbj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_q7n3l")

@@ -185,7 +185,6 @@ scale = Vector2(2.8, 2.8)
 text = "Exit"
 
 [node name="$" type="Label" parent="CanvasLayer"]
-z_index = 100
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
