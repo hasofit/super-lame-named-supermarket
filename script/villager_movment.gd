@@ -36,7 +36,7 @@ func check_raycast_for_groups():
 			body = ray.get_collider()
 			if body and body.is_in_group("Inter"):
 				if body.is_in_group("Cash"):
-					body.pay_out(player, inv)
+					body.pay_out(player, inv, self)
 					body = null
 					break
 				elif body.is_in_group("Shelf") and !moving:

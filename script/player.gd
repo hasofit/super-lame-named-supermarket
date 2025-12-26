@@ -7,9 +7,12 @@ extends CharacterBody2D
 @onready var ray_cast_2d_4: RayCast2D = $RayCast2D4
 @onready var inventory_label: Label = $"../CanvasLayer/Inventory"
 @onready var order_menu: Panel = $"../CanvasLayer/Order Menu"
-@onready var milk_button: Button = $"../CanvasLayer/Order Menu/Milk Button"
-@onready var chips_button: Button = $"../CanvasLayer/Order Menu/Chips Button"
+@onready var milk_button: TextureButton = $"../CanvasLayer/Order Menu/Milk Button"
+@onready var chips_button: TextureButton = $"../CanvasLayer/Order Menu/Chips Button"
 @onready var money_label: Label = $"../CanvasLayer/$"
+@onready var milk_label: Label = $"../CanvasLayer/Order Menu/Milk Button/Milk Label"
+@onready var chips_label: Label = $"../CanvasLayer/Order Menu/Chips Button/Chips Label"
+@onready var eggs_label: Label = $"../CanvasLayer/Order Menu/Eggs Button/Eggs Label"
 
 @export var SPEED = 300.0
 @export var inventory = []
@@ -22,7 +25,9 @@ var found = ""
 var foundbody: Node = null
 
 var milk_price = 5
+var milk_price_sell = 4
 var chips_price = 7
+var eggs_price = 15
 var player_money = 100000
 
 func _ready() -> void:
@@ -62,8 +67,9 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta: float) -> void:
 	money_label.text = str(player_money) + "$"
-	milk_button.text = "Buy Milk for " + str(milk_price)
-	chips_button.text = "Buy Chips for " + str(chips_price)
+	milk_label.text = "Buy Milk for " + str(milk_price)
+	chips_label.text = "Buy Chips for " + str(chips_price)
+	eggs_label.text = "Buy Eggs for " + str(eggs_price)
 
 	shelf_detect(ray_cast_2d)
 	
@@ -76,7 +82,7 @@ func _process(delta: float) -> void:
 		elif found == "Order":
 			foundbody.open_menu(order_menu, self)
 		elif found == "Cash":
-			foundbody.pay_out(self, inventory)
+			foundbody.pay_out(self, inventory, self)
 
 func shelf_detect(raycast: RayCast2D) -> void:
 	if raycast.is_colliding():
@@ -112,3 +118,16 @@ func _on_exit_order_pressed() -> void:
 func hide_menu():
 	order_menu.hide()
 	allowed_move = true
+
+
+func _on_eggs_button_pressed() -> void:
+	if player_money >= eggs_price:
+		player_money -= eggs_price
+		inventory.append("Eggs")
+		eggs_price = round(eggs_price * 1.01 * 100.0) / 100.0
+
+func _on_milk_box_value_changed(value: float) -> void:
+	if value < milk_price:
+		milk_price_sell = milk_price
+	else:
+		milk_price_sell = value

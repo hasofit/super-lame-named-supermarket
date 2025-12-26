@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Super lame named supermarket"
 run/main_scene="uid://b17fdd4imlc7c"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
@@ -28,6 +28,8 @@ Inter=""
 Order=""
 Shelf=""
 Cash=""
+Able_to_sell=""
+Player=""
 
 [gui]
 

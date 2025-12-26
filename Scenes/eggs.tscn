@@ -1,18 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0yrb0el5drpj"]
+[gd_scene load_steps=3 format=3 uid="uid://b0sx4f7knua3e"]
 
-[ext_resource type="Texture2D" uid="uid://b5tnbb8ojf4y2" path="res://sprites/mimilk.png" id="1_sj35g"]
+[ext_resource type="Texture2D" uid="uid://dmlb1issb15r1" path="res://sprites/eggs.png" id="1_1hsws"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4r4fw"]
 size = Vector2(24, 14.400001)
 
-[node name="Milk" type="Area2D"]
+[node name="Eggs" type="Area2D"]
 z_index = 2
 scale = Vector2(2.5, 2.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -12)
-texture = ExtResource("1_sj35g")
+texture = ExtResource("1_1hsws")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8.4)
+position = Vector2(-2.8, -13.199998)
+scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_4r4fw")

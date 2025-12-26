@@ -35,7 +35,7 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_clim2"]
 height = 66.0
 
-[node name="Villager" type="Area2D"]
+[node name="Villager" type="Area2D" groups=["Able_to_sell"]]
 z_index = 2
 position = Vector2(100, 100)
 script = ExtResource("1_7u53x")
