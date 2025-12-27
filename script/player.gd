@@ -13,9 +13,16 @@ extends CharacterBody2D
 @onready var milk_label: Label = $"../CanvasLayer/Order Menu/Milk Button/Milk Label"
 @onready var chips_label: Label = $"../CanvasLayer/Order Menu/Chips Button/Chips Label"
 @onready var eggs_label: Label = $"../CanvasLayer/Order Menu/Eggs Button/Eggs Label"
+@onready var milk_box: SpinBox = $"../CanvasLayer/Cash Menu/MilkBox"
+@onready var chips_box: SpinBox = $"../CanvasLayer/Cash Menu/ChipsBox"
+@onready var boreo_box: SpinBox = $"../CanvasLayer/Cash Menu/BoreoBox"
+@onready var eggs_box: SpinBox = $"../CanvasLayer/Cash Menu/EggsBox"
+@onready var carrot_box: SpinBox = $"../CanvasLayer/Cash Menu/CarrotBox"
+@onready var cash_menu: Panel = $"../CanvasLayer/Cash Menu"
 
 @export var SPEED = 300.0
 @export var inventory = []
+@export var player_money = 100
 
 var allowed_move = true
 var directionX = 0.0
@@ -25,12 +32,28 @@ var found = ""
 var foundbody: Node = null
 
 var milk_price = 5
-var milk_price_sell = 4
+var milk_price_sell = 5
 var chips_price = 7
+var chips_price_sell = 7
 var eggs_price = 15
-var player_money = 100000
+var eggs_price_sell = 15
+var carrot_price = 3
+var carrot_price_sell = 3
+var boreo_price = 8
+var boreo_price_sell = 8
 
 func _ready() -> void:
+	
+	carrot_box.min_value = carrot_price
+	milk_box.min_value = milk_price
+	chips_box.min_value = chips_price
+	eggs_box.min_value = eggs_price
+	boreo_box.min_value = boreo_price
+	carrot_box.max_value = carrot_price * randf_range(1,2)
+	milk_box.max_value = milk_price * randf_range(1,2)
+	chips_box.max_value = chips_price * randf_range(1,2)
+	eggs_box.max_value = eggs_price * randf_range(1,2)
+	boreo_box.max_value = boreo_price * randf_range(1,2)
 	order_menu.hide()
 
 func _physics_process(delta: float) -> void:
@@ -117,6 +140,7 @@ func _on_exit_order_pressed() -> void:
 	
 func hide_menu():
 	order_menu.hide()
+	cash_menu.hide()
 	allowed_move = true
 
 

@@ -21,7 +21,5 @@ func pay_out(player, inventory, body):
 				player.player_money += 0
 				inventory.erase(i)
 	elif body.is_in_group("Player"):
-		if menu.visible:
-			menu.hide()
-		else:
-			menu.show()
+		menu.show()
+		player.allowed_move = false
