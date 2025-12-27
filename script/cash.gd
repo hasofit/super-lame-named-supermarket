@@ -17,6 +17,12 @@ func pay_out(player, inventory, body):
 			elif i == "Eggs":
 				player.player_money += player.eggs_price_sell
 				inventory.erase(i)
+			elif i == "Bereo":
+				player.player_money += player.boreo_price_sell
+				inventory.erase(i)
+			elif i == "Carrot":
+				player.player_money += player.carrot_price_sell
+				inventory.erase(i)
 			else:
 				player.player_money += 0
 				inventory.erase(i)

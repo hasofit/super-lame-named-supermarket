@@ -10,6 +10,8 @@ var last_item: String
 const MILK = preload("res://Scenes/milk.tscn")
 const CHIPS = preload("res://Scenes/chips.tscn")
 const EGGS = preload("uid://b0sx4f7knua3e")
+const BEREO = preload("uid://btvdv6o3k6d4f")
+const CARROT = preload("uid://b1m8sqq24y15r")
 
 func _ready():
 	for path in markers:
@@ -38,6 +40,12 @@ func place_item(inventory: Array) -> bool:
 	elif inventory.has("Eggs"):
 		item_to_place = EGGS.instantiate()
 		item_type = "Eggs"
+	elif inventory.has("Boreo"):
+		item_to_place = BEREO.instantiate()
+		item_type = "Boreo"
+	elif inventory.has("Carrot"):
+		item_to_place = CARROT.instantiate()
+		item_type = "Carrot"
 
 	if item_to_place:
 		var pos = item_pos_calc()

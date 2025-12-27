@@ -39,10 +39,12 @@ func check_raycast_for_groups():
 					body.pay_out(player, inv, self)
 					body = null
 					break
-				elif body.is_in_group("Shelf") and !moving:
-					body.take_item(inv)
-					body = null
-					break
+				elif body.is_in_group("Shelf"):
+					if body.shelfinv:
+						moving = false
+						body.take_item(inv)
+						body = null
+						break
 
 func STOP():
 	if body and body.is_in_group("Inter") and body.is_in_group("Shelf"):

@@ -19,6 +19,8 @@ extends CharacterBody2D
 @onready var eggs_box: SpinBox = $"../CanvasLayer/Cash Menu/EggsBox"
 @onready var carrot_box: SpinBox = $"../CanvasLayer/Cash Menu/CarrotBox"
 @onready var cash_menu: Panel = $"../CanvasLayer/Cash Menu"
+@onready var boreo_label: Label = $"../CanvasLayer/Order Menu/Boreo Button/Boreo Label"
+@onready var carrot_label: Label = $"../CanvasLayer/Order Menu/Carrot Button/Carrot Label"
 
 @export var SPEED = 300.0
 @export var inventory = []
@@ -43,20 +45,10 @@ var boreo_price = 8
 var boreo_price_sell = 8
 
 func _ready() -> void:
-	
-	carrot_box.min_value = carrot_price
-	milk_box.min_value = milk_price
-	chips_box.min_value = chips_price
-	eggs_box.min_value = eggs_price
-	boreo_box.min_value = boreo_price
-	carrot_box.max_value = carrot_price * randf_range(1,2)
-	milk_box.max_value = milk_price * randf_range(1,2)
-	chips_box.max_value = chips_price * randf_range(1,2)
-	eggs_box.max_value = eggs_price * randf_range(1,2)
-	boreo_box.max_value = boreo_price * randf_range(1,2)
 	order_menu.hide()
 
 func _physics_process(delta: float) -> void:
+	
 	inventory_label.text = str(inventory)
 
 	# Get movement input
@@ -93,6 +85,8 @@ func _process(delta: float) -> void:
 	milk_label.text = "Buy Milk for " + str(milk_price)
 	chips_label.text = "Buy Chips for " + str(chips_price)
 	eggs_label.text = "Buy Eggs for " + str(eggs_price)
+	carrot_label.text = "Buy Eggs for " + str(carrot_price)
+	boreo_label.text = "Buy Eggs for " + str(boreo_price)
 
 	shelf_detect(ray_cast_2d)
 	
@@ -128,12 +122,14 @@ func _on_milk_button_pressed() -> void:
 		player_money -= milk_price
 		inventory.append("Milk")
 		milk_price = round(milk_price * 1.01 * 100.0) / 100.0
+		update_price()
 
 func _on_chips_button_pressed() -> void:
 	if player_money >= chips_price:
 		player_money -= chips_price
 		inventory.append("Chips")
 		chips_price = round(chips_price * 1.01 * 100.0) / 100.0
+		update_price()
 
 func _on_exit_order_pressed() -> void:
 	hide_menu()
@@ -149,9 +145,63 @@ func _on_eggs_button_pressed() -> void:
 		player_money -= eggs_price
 		inventory.append("Eggs")
 		eggs_price = round(eggs_price * 1.01 * 100.0) / 100.0
+		update_price()
 
 func _on_milk_box_value_changed(value: float) -> void:
 	if value < milk_price:
 		milk_price_sell = milk_price
 	else:
 		milk_price_sell = value
+
+
+func _on_carrot_button_pressed() -> void:
+	if player_money >= carrot_price:
+		player_money -= carrot_price
+		inventory.append("Carrot")
+		carrot_price = round(carrot_price * 1.01 * 100.0) / 100.0
+		update_price()
+
+
+func _on_boreo_button_pressed() -> void:
+	if player_money >= boreo_price:
+		player_money -= boreo_price
+		inventory.append("Boreo")
+		boreo_price = round(boreo_price * 1.01 * 100.0) / 100.0
+		
+func update_price():
+	carrot_box.min_value = carrot_price
+	milk_box.min_value = milk_price
+	chips_box.min_value = chips_price
+	eggs_box.min_value = eggs_price
+	boreo_box.min_value = boreo_price
+	carrot_box.max_value = carrot_price * randf_range(1,2)
+	milk_box.max_value = milk_price * randf_range(1,2)
+	chips_box.max_value = chips_price * randf_range(1,2)
+	eggs_box.max_value = eggs_price * randf_range(1,2)
+	boreo_box.max_value = boreo_price * randf_range(1,2)
+
+
+func _on_chips_box_value_changed(value: float) -> void:
+	if value < chips_price:
+		chips_price_sell = chips_price
+	else:
+		chips_price_sell = value
+
+func _on_boreo_box_value_changed(value: float) -> void:
+	if value < boreo_price:
+		boreo_price_sell = boreo_price
+	else:
+		boreo_price_sell = value
+
+
+func _on_eggs_box_value_changed(value: float) -> void:
+	if value < eggs_price:
+		eggs_price_sell = eggs_price
+	else:
+		eggs_price_sell = value
+
+func _on_carrot_box_value_changed(value: float) -> void:
+	if value < carrot_price:
+		carrot_price_sell = carrot_price
+	else:
+		carrot_price_sell = value
