@@ -1,18 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://00iowefr4wre"]
+[gd_scene format=3 uid="uid://00iowefr4wre"]
 
 [ext_resource type="Script" uid="uid://ctua6ncoiecky" path="res://script/cash.gd" id="1_g4qth"]
-[ext_resource type="Texture2D" uid="uid://clkc7eulphufi" path="res://sprites/supplymenu.png" id="2_2xbqq"]
+[ext_resource type="Texture2D" uid="uid://c5ucejyicj6qd" path="res://sprites/cashier table2.0.png" id="2_g4qth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw2j7"]
 size = Vector2(32, 27)
 
-[node name="Cash" type="StaticBody2D" groups=["Cash", "Inter"]]
+[node name="Cash" type="StaticBody2D" unique_id=153732838 groups=["Cash", "Inter"]]
 script = ExtResource("1_g4qth")
 
-[node name="Supplymenu" type="Sprite2D" parent="."]
+[node name="Supplymenu" type="Sprite2D" parent="." unique_id=1052110026]
 modulate = Color(0, 1, 1, 1)
-texture = ExtResource("2_2xbqq")
+texture = ExtResource("2_g4qth")
+flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1615516998]
 position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_mw2j7")

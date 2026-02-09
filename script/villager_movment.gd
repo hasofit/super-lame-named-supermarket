@@ -7,7 +7,8 @@ var speed: float = 0.03
 var inv: Array[String] = ["Milk", "Chips"]
 var body: Node = null
 
-@onready var path_follow_2d: PathFollow2D = $"../Path2D/PathFollow2D"
+@export var path_follow_2d: PathFollow2D
+
 @onready var timer: Timer = $Timer
 @onready var ray_cast_1: RayCast2D = $RayCast2D
 @onready var ray_cast_2: RayCast2D = $RayCast2D2
@@ -15,6 +16,11 @@ var body: Node = null
 @onready var ray_cast_4: RayCast2D = $RayCast2D4
 
 func _ready():
+	var alive_chance = randi_range(1,3)
+	if alive_chance == 3:
+		queue_free()
+	speed = randf_range(0.02,0.05)
+	print(speed,self.name)
 	timer.start(randf_range(10, 15))
 
 func _process(delta):
