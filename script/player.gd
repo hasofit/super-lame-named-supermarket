@@ -170,10 +170,10 @@ func _on_boreo_button_pressed() -> void:
 		
 func update_price():
 	carrot_box.min_value = carrot_price
-	milk_box.min_value = milk_price
-	chips_box.min_value = chips_price
-	eggs_box.min_value = eggs_price
-	boreo_box.min_value = boreo_price
+	milk_box.min_value = milk_price / randf_range(1,2)
+	chips_box.min_value = chips_price / randf_range(1,2)
+	eggs_box.min_value = eggs_price / randf_range(1,2)
+	boreo_box.min_value = boreo_price / randf_range(1,2)
 	carrot_box.max_value = carrot_price * randf_range(1,2)
 	milk_box.max_value = milk_price * randf_range(1,2)
 	chips_box.max_value = chips_price * randf_range(1,2)
@@ -205,3 +205,13 @@ func _on_carrot_box_value_changed(value: float) -> void:
 		carrot_price_sell = carrot_price
 	else:
 		carrot_price_sell = value
+
+func get_buy_chance(sell_price : float, best_price : float):
+	var ratio = sell_price / best_price
+	
+	#ratio 1 is basicly always coz ppl are dumb so they buy stuff
+	#ratio 2 around 20% coz math works in some ways
+	#ratio 3 is fucking 5% no one is hitting that dude
+	
+	var chance = 1.0 / pow(ratio, 2) #locks it so it would never be below 5%
+	return 1.0 / clamp(chance, 0.05, 1.0)

@@ -7,25 +7,41 @@ func _ready() -> void:
 
 func pay_out(player, inventory, body):
 	if body.is_in_group("Able_to_sell"):
-		for i in inventory:
-			if i == "Milk":
-				player.player_money += player.milk_price_sell
-				inventory.erase(i)
-			elif i == "Chips":
-				player.player_money += player.chips_price_sell
-				inventory.erase(i)
-			elif i == "Eggs":
-				player.player_money += player.eggs_price_sell
-				inventory.erase(i)
-			elif i == "Bereo":
-				player.player_money += player.boreo_price_sell
-				inventory.erase(i)
-			elif i == "Carrot":
-				player.player_money += player.carrot_price_sell
-				inventory.erase(i)
+	
+		for idx in range(inventory.size() - 1, -1, -1):
+			var item = inventory[idx]
+			var sold = false
+			
+			if item == "Milk":
+				sold = randf() <= player.get_buy_chance(player.milk_price_sell, player.milk_price)
+				if sold:
+					player.player_money += player.milk_price_sell
+			
+			elif item == "Chips":
+				sold = randf() <= player.get_buy_chance(player.chips_price_sell, player.chips_price)
+				if sold:
+					player.player_money += player.chips_price_sell
+			
+			elif item == "Eggs":
+				sold = randf() <= player.get_buy_chance(player.eggs_price_sell, player.eggs_price)
+				if sold:
+					player.player_money += player.eggs_price_sell
+			
+			elif item == "Boreo":
+				sold = randf() <= player.get_buy_chance(player.boreo_price_sell, player.boreo_price)
+				if sold:
+					player.player_money += player.boreo_price_sell
+			
+			elif item == "Carrot":
+				sold = randf() <= player.get_buy_chance(player.carrot_price_sell, player.carrot_price)
+				if sold:
+					player.player_money += player.carrot_price_sell
+			
+			if sold:
+				inventory.remove_at(idx)
 			else:
-				player.player_money += 0
-				inventory.erase(i)
+				print("Customer refused to buy ", item)
+
 	elif body.is_in_group("Player"):
 		menu.show()
 		player.allowed_move = false
